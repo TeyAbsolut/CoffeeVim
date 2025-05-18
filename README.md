@@ -1,3 +1,5 @@
+⚠️ **Warning**: This is work in progress.
+
 # **Installation**
 
 To install this NeoVim configuration you can run the following command :

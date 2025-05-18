@@ -53,22 +53,8 @@ map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 -- Pin/unpin buffer
 map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 
--- Goto pinned/unpinned buffer
---                 :BufferGotoPinned
---                 :BufferGotoUnpinned
-
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
-
--- Wipeout buffer
---                 :BufferWipeout
-
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
 
 -- Magic buffer-picking mode
 map('n', '<C-p>',   '<Cmd>BufferPick<CR>', opts)

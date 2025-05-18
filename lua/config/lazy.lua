@@ -29,6 +29,7 @@ require("lazy").setup({
         { 'nvim-treesitter/nvim-treesitter' },
         { 'nvim-lualine/lualine.nvim' },
         { 'neovim/nvim-lspconfig' },
+        { 'goolord/alpha-nvim' },
         { 'mason-org/mason.nvim' },
         { 'williamboman/mason-lspconfig.nvim' },
         { 'saghen/blink.cmp', dependencies = { 'L3MON4D3/LuaSnip', 'rafamadriz/friendly-snippets', 'onsails/lspkind.nvim', }, opts_extend = { "sources.default" } },

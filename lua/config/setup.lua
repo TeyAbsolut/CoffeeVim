@@ -86,6 +86,7 @@ cmp.setup({
         use_nvim_cmp_as_default = false,
         nerd_font_variant = '0xproto',
     },
+    cmdline = { enabled = false },
     completion = {
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
         ghost_text = { enabled = true },
@@ -140,7 +141,6 @@ require("noice").setup({
     override = {
       ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
       ["vim.lsp.util.stylize_markdown"] = true,
-      ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
     },
   },
   -- you can enable a preset for easier configuration

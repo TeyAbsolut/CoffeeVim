@@ -20,7 +20,7 @@ local config = {
     '-javaagent:' .. lombok_path,
 
     '-jar', jdtls_path .. '/plugins/org.eclipse.equinox.launcher_1.7.0.v20250331-1702.jar',
-    
+
     '-configuration', jdtls_path .. '/config_linux',
 
     '-data', workspace_path,

@@ -8,11 +8,35 @@ vim.opt.smartindent = true
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
+local lspconfig = require('lspconfig')
+
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        globals = {
+          'vim',
+        },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
 -- Diagnostic configuration for inline warnings and errors
 vim.diagnostic.config({
   virtual_text = {
     prefix = "●", -- Symbol for virtual text
-    source = "always", -- Show source of diagnostic
+    source = true, -- Show source of diagnostic
     format = function(diagnostic)
       return string.format("%s: %s", diagnostic.source, diagnostic.message)
     end,
@@ -52,7 +76,9 @@ vim.cmd.colorscheme 'catppuccin'
 require('nvim-tree').setup({})
 
 -- LuaLine Setup
-require('lualine').setup({})
+require('lualine').setup({
+    options = { theme = 'auto' },
+})
 
 -- TreeSitter Setup
 require('nvim-treesitter.configs').setup({
@@ -60,12 +86,16 @@ require('nvim-treesitter.configs').setup({
     sync_install = true,
     highlight = { enable = true },
     indent = { enable = true },
+    modules = {},
+    ignore_install = {},
+    auto_install = true,
 })
 
 -- Mason Setup
 require('mason').setup({})
 require("mason-lspconfig").setup({
     ensure_installed = { "jdtls" },
+    automatic_enable = true,
 })
 
 -- Autocompletion setup
@@ -84,7 +114,7 @@ cmp.setup({
     appearance = {
         highlight_ns = vim.api.nvim_create_namespace('blink_cmp'),
         use_nvim_cmp_as_default = false,
-        nerd_font_variant = '0xproto',
+        nerd_font_variant = 'mono',
     },
     cmdline = { enabled = false },
     completion = {

@@ -8,6 +8,6 @@ git clone https://github.com/TeyAbsolut/CoffeeVim.git ~/.config/nvim
 
 # **Supported Languages**
 
-Current the supported languages in this configuration are : 
+Currently, the supported languages in this configuration are : 
 * Lua
 * Java

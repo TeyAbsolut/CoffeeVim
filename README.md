@@ -2,7 +2,7 @@
 
 # **Installation**
 
-To install this NeoVim configuration you can run the following command :
+To install this NeoVim configuration, run the following command :
 
 ```bash
 git clone https://github.com/TeyAbsolut/CoffeeVim.git ~/.config/nvim

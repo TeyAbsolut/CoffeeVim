@@ -24,26 +24,7 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-        { 'nvim-tree/nvim-web-devicons', lazy = true },
-        { 'lewis6991/gitsigns.nvim', lazy = false },
-        { 'nvim-treesitter/nvim-treesitter' },
-        { 'nvim-lualine/lualine.nvim' },
-        { 'neovim/nvim-lspconfig' },
-        { 'goolord/alpha-nvim' },
-        { 'mason-org/mason.nvim' },
-        { 'williamboman/mason-lspconfig.nvim' },
-        { 'saghen/blink.cmp', dependencies = { 'L3MON4D3/LuaSnip', 'rafamadriz/friendly-snippets', 'onsails/lspkind.nvim', }, opts_extend = { "sources.default" } },
-        { 'mfussenegger/nvim-dap' },
-	    { 'rcarriga/nvim-dap-ui', dependencies = { "mfussenegger/nvim-dap" } },
-        { 'mfussenegger/nvim-jdtls' },
-        { "nvim-neotest/neotest", dependencies = { "nvim-neotest/nvim-nio", "nvim-lua/plenary.nvim", "antoinemadec/FixCursorHold.nvim", "nvim-treesitter/nvim-treesitter" } },
-        { "rcasia/neotest-java", ft = "java", dependencies = { "mfussenegger/nvim-jdtls", "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui", "theHamsta/nvim-dap-virtual-text" } },
-        { 'folke/which-key.nvim', lazy = false },
-        { 'nvim-tree/nvim-tree.lua', version = '*', lazy = false },
-        { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-        { 'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim', 'jonarrien/telescope-cmdline.nvim' } },
-        { 'romgrk/barbar.nvim' },
-        { "folke/noice.nvim", event = "VeryLazy", dependencies = { "rcarriga/nvim-notify" } }
+        { import = "plugins" }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

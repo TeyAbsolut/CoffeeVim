@@ -13,3 +13,9 @@ git clone https://github.com/TeyAbsolut/CoffeeVim.git ~/.config/nvim
 Currently, the supported languages in this configuration are : 
 * Lua
 * Java
+* Javascript
+* Typescript
+* React
+* Angular
+* Svelte
+* Vue

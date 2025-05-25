@@ -1,6 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
+		-- Lua configuration
 		vim.lsp.config("lua_ls", {
 			on_init = function(client)
 				if client.workspace_folders then
@@ -42,5 +43,19 @@ return {
 				Lua = {},
 			},
 		})
+
+		local lspconfig = require("lspconfig")
+
+		lspconfig.ts_ls.setup({
+			filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+		})
+
+		local servers = { "css_variables", "cssmodules_ls", "cssls", "angularls", "svelte" }
+
+		for _, lsp in ipairs(servers) do
+			lspconfig[lsp].setup({})
+		end
+
+		lspconfig.vls.setup({})
 	end,
 }

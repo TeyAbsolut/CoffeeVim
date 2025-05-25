@@ -1,12 +1,13 @@
 return {
 	{ "goolord/alpha-nvim" },
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"navarasu/onedark.nvim",
 		priority = 1000,
-		opts = { flavour = "mocha" },
 		config = function()
-			vim.cmd.colorscheme("catppuccin")
+            require('onedark').setup {
+                style = 'darker'
+            }
+			require("onedark").load()
 		end,
 	},
 	{ "folke/which-key.nvim", lazy = false },
@@ -21,7 +22,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "java", "lua" },
+				ensure_installed = { "java", "lua", "vue", "svelte", "angular", "javascript", "typescript" },
 				sync_install = true,
 				highlight = { enable = true },
 				indent = { enable = true },

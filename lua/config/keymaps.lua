@@ -50,4 +50,4 @@ map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
-map('n', '<CS-F>', "<Cmd>lua require('conform').format()<CR>", opts)
+map('n', '<CS-F>', "<Cmd>lua vim.lsp.buf.format()<CR>", opts)

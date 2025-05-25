@@ -60,12 +60,10 @@ return {
             filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
         })
 
-        local servers = { "css_variables", "cssmodules_ls", "cssls", "angularls", "svelte" }
+        local servers = { "css_variables", "cssmodules_ls", "cssls", "angularls", "svelte", "vue_ls" }
 
         for _, lsp in ipairs(servers) do
             lspconfig[lsp].setup({})
         end
-
-        lspconfig.volar.setup({})
     end,
 }

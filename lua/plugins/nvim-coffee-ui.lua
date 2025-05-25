@@ -32,7 +32,7 @@ return {
 			})
 		end,
 	},
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{ "nvim-tree/nvim-web-devicons", lazy = false },
 	{ "nvim-tree/nvim-tree.lua", version = "*", opts = {}, lazy = false },
 	{
 		"romgrk/barbar.nvim",

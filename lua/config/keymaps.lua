@@ -25,6 +25,10 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>fc', '<cmd>Telescope cmdline<cr>', { desc = 'Telescope command line' })
 
+vim.keymap.set('n', '<C-m>o', '<cmd>Maven<CR>', { desc = 'Open Maven' })
+vim.keymap.set('n', '<C-m>e', '<cmd>MavenExec<CR>', { desc = 'Execution  maven command' })
+vim.keymap.set('n', '<C-m>i', '<cmd>MavenInit<CR>', { desc = 'Initialize maven project' })
+
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -63,3 +67,6 @@ vim.keymap.set('n', "<leader>mr", "<Cmd>MoltenReevaluateCell<CR>")
 vim.keymap.set('n', "<leader>mn", "<Cmd>MoltenNext<CR>")
 vim.keymap.set('n', "<leader>mp", "<Cmd>MoltenPrev<CR>")
 vim.keymap.set('n', "<leader>mo", "<Cmd>MoltenOpenInBrowser<CR>")
+vim.keymap.set('n', "<leader>mv", "<Cmd>MoltenEvaluateVisual<CR>")
+vim.keymap.set('n', "<leader>ml", "<Cmd>MoltenEvaluateLine<CR>")
+vim.keymap.set('n', "<leader>md", "<Cmd>MoltenDelete<CR>")

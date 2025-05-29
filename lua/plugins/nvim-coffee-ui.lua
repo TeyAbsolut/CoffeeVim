@@ -22,7 +22,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				ensure_installed = { "java", "lua", "vue", "svelte", "angular", "javascript", "typescript" },
+				ensure_installed = { "java", "lua", "python", "vue", "svelte", "angular", "javascript", "typescript" },
 				sync_install = true,
 				highlight = { enable = true },
 				indent = { enable = true },

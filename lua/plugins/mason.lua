@@ -16,6 +16,13 @@ return {
                 "css-lsp",
                 "css-variables-language-server",
                 "cssmodules-language-server",
+                "python-lsp-server",
+                "black",
+                "flake8",
+                "isort",
+                "debugpy",
+                "html",
+                "htmx",
             },
             automatic_enable = true,
         }
